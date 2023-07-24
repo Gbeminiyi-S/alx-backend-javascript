@@ -117,7 +117,6 @@ An introductory project on:
 	]
 	bob@dylan:~$
  	```
-
 7. [6-string-interpolation.js](./6-string-interpolation.js) - Rewrite the return statement to use a template literal so you can the substitute the variables you’ve defined
 
 	**Execution Example**:
@@ -132,7 +131,7 @@ An introductory project on:
 	As of 2017, it was the seventh-highest income county in the United States, with a per capita personal income of $119,868.
     As of 2015, San Francisco proper had a GDP of $154.2 billion, and a GDP per capita of $178,479.
 	bob@dylan:~$
-
+	```
 8. [7-getBudgetObject.js](./7-getBudgetObject.js) - Modify the following function’s budget `object` to simply use the keyname instead
 
 	**Execution Example**:
@@ -145,6 +144,20 @@ An introductory project on:
 	bob@dylan:~$
 	bob@dylan:~$ npm run dev 7-main.js 
 	{ income: 400, gdp: 700, capita: 900 }
+	bob@dylan:~$
+	```
+9. [8-getBudgetCurrentYear.js](./8-getBudgetCurrentYear.js) - Rewrite the `getBudgetForCurrentYear` function to use ES6 computed property names on the `budget` object
+
+	**Execution Example**:
+	```
+	bob@dylan:~$ cat 8-main.js
+	import getBudgetForCurrentYear from './8-getBudgetCurrentYear.js';
+
+	console.log(getBudgetForCurrentYear(2100, 5200, 1090));
+
+	bob@dylan:~$
+	bob@dylan:~$ npm run dev 8-main.js 
+	{ 'income-2021': 2100, 'gdp-2021': 5200, 'capita-2021': 1090 }
 	bob@dylan:~$
 	```
 
