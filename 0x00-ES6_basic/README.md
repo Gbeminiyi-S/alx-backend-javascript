@@ -193,4 +193,60 @@ An introductory project on:
 	[ 'correctly-appended', 'correctly-fixed', 'correctly-displayed' ]
 	bob@dylan:~$
 	```
+12. [11-createEmployeesObject.js](./11-createEmployeesObject.js) - Write a function named `createEmployeesObject` that will receive two arguments:
+	- `departmentName` (String)
+	- `employees` (Array of Strings)
+	```
+	export default function createEmployeesObject(departmentName, employees) {
+
+	}
+	```
+	The function should return an object with the following format:
+	```
+	{
+     		$departmentName: [
+          	$employees,
+     		],
+	}
+	```
+
+	**Execution Example**:
+	```
+	bob@dylan:~$ cat 11-main.js
+	import createEmployeesObject from './11-createEmployeesObject.js';
+
+	console.log(createEmployeesObject("Software", [ "Bob", "Sylvie" ]));
+
+	bob@dylan:~$
+	bob@dylan:~$ npm run dev 11-main.js 
+	{ Software: [ 'Bob', 'Sylvie' ] }
+	bob@dylan:~$
+	```
+13. [getNumberOfDepartments](./getNumberOfDepartments) - Write a function named `createReportObject` whose parameter, `employeesList`, is the return value of the previous function `createEmployeesObject`.
+
+	- `createReportObject` should return an object containing the key `allEmployees` and a method property called `getNumberOfDepartments.`
+	- `allEmployees` is a key that maps to an object containing the department name and a list of all the employees in that department.
+	- The method property receives `employeesList` and returns the number of departments.
+
+	**Execution Example**:
+	```
+	bob@dylan:~$ cat 12-main.js
+	import createEmployeesObject from './11-createEmployeesObject.js';
+	import createReportObject from './12-createReportObject.js';
+
+	const employees = {
+	    ...createEmployeesObject('engineering', ['Bob', 'Jane']),
+	    ...createEmployeesObject('marketing', ['Sylvie'])
+	};      
+
+	const report = createReportObject(employees);
+	console.log(report.allEmployees);
+	console.log(report.getNumberOfDepartments(report.allEmployees));
+
+	bob@dylan:~$
+	bob@dylan:~$ npm run dev 12-main.js 
+	{ engineering: [ 'Bob', 'Jane' ], marketing: [ 'Sylvie' ] }
+	2
+	bob@dylan:~$
+	```
 ### Advanced
