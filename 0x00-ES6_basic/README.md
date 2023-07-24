@@ -178,5 +178,19 @@ An introductory project on:
 	20 euros
 	bob@dylan:~$
 	```
+11. [10-loops.js](./10-loops.js) - Rewrite the function `appendToEachArrayValue` to use ES6’s `for...of` operator
+	
+	
+	**Execution Example**:
+        ```
+	bob@dylan:~$ cat 10-main.js
+	import appendToEachArrayValue from './10-loops.js';
 
+	console.log(appendToEachArrayValue(['appended', 'fixed', 'displayed'], 'correctly-'));
+
+	bob@dylan:~$
+	bob@dylan:~$ npm run dev 10-main.js 
+	[ 'correctly-appended', 'correctly-fixed', 'correctly-displayed' ]
+	bob@dylan:~$
+	```
 ### Advanced
