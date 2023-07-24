@@ -196,11 +196,7 @@ An introductory project on:
 12. [11-createEmployeesObject.js](./11-createEmployeesObject.js) - Write a function named `createEmployeesObject` that will receive two arguments:
 	- `departmentName` (String)
 	- `employees` (Array of Strings)
-	```
-	export default function createEmployeesObject(departmentName, employees) {
-
-	}
-	```
+	
 	The function should return an object with the following format:
 	```
 	{
@@ -250,3 +246,33 @@ An introductory project on:
 	bob@dylan:~$
 	```
 ### Advanced
+14. [report.allEmployees](./report.allEmployees) - Write a function named createIteratorObject, that will take into argument a report Object created with the previous function createReportObject.
+	- This function will return an iterator to go through every employee in every department.
+	**Execution Example**:
+	```
+	bob@dylan:~$ cat 100-main.js
+	import createIteratorObject from "./100-createIteratorObject.js";
+
+	import createEmployeesObject from './11-createEmployeesObject.js';
+	import createReportObject from './12-createReportObject.js';
+
+	const employees = {
+	    ...createEmployeesObject('engineering', ['Bob', 'Jane']),
+	    ...createEmployeesObject('marketing', ['Sylvie'])
+	};
+
+	const report = createReportObject(employees);
+
+	const reportWithIterator = createIteratorObject(report);
+
+	for (const item of reportWithIterator) {
+	    console.log(item);
+	}
+
+	bob@dylan:~$
+	bob@dylan:~$ npm run dev 100-main.js 
+	Bob
+	Jane
+	Sylvie
+	bob@dylan:~$
+	```
