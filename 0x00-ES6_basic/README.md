@@ -160,5 +160,23 @@ An introductory project on:
 	{ 'income-2021': 2100, 'gdp-2021': 5200, 'capita-2021': 1090 }
 	bob@dylan:~$
 	```
+10. [9-getFullBudget.js](./9-getFullBudget.js) - Rewrite `getFullBudgetObject` to use ES6 method properties in the `fullBudget` object
+
+	**Execution Example**:
+	```
+	bob@dylan:~$ cat 9-main.js
+	import getFullBudgetObject from './9-getFullBudget.js';
+
+	const fullBudget = getFullBudgetObject(20, 50, 10);
+
+	console.log(fullBudget.getIncomeInDollars(fullBudget.income));
+	console.log(fullBudget.getIncomeInEuros(fullBudget.income));
+
+	bob@dylan:~$
+	bob@dylan:~$ npm run dev 9-main.js 
+	$20
+	20 euros
+	bob@dylan:~$
+	```
 
 ### Advanced
