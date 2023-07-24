@@ -23,63 +23,76 @@ An introductory project on:
 1. [0-constants.js](./0-constants.js) - Modify
 	- function `taskFirst` to instantiate variables using `const`
 	- function `taskNext` to instantiate variables using `let`
-
+	**Execution Example**:
 	```
-	export function taskFirst() {
-	  var task = 'I prefer const when I can.';
-	  return task;
-	}
-	
-	export function getLast() {
-	  return ' is okay';
-	}
-	
-	export function taskNext() {
-	  var combination = 'But sometimes let';
-	  combination += getLast();
-	
-	  return combination;
-	}
+	bob@dylan:~$ cat 0-main.js
+	import { taskFirst, taskNext } from './0-constants.js';
+
+	console.log(`${taskFirst()} ${taskNext()}`);
+
+	bob@dylan:~$ 
+	bob@dylan:~$ npm run dev 0-main.js 
+	I prefer const when I can. But sometimes let is okay
+	bob@dylan:~$ 
 	```
 2. [1-block-scoped.js](./1-block-scoped.js) - modify the variables inside the function `taskBlock` so that the variables aren’t overwritten inside the conditional block
+	**Execution Example**:
 	```
-	export default function taskBlock(trueOrFalse) {
-  	  var task = false;
-	  var task2 = true;
+	bob@dylan:~$ cat 1-main.js
+	import taskBlock from './1-block-scoped.js';
 
-	  if (trueOrFalse) {
-	    var task = true;
-	    var task2 = false;
-	  }
-
-	  return [task, task2];
-	}
+	console.log(taskBlock(true));
+	console.log(taskBlock(false));
+	bob@dylan:~$
+	bob@dylan:~$ npm run dev 1-main.js 
+	[ false, true ]
+	[ false, true ]
+	bob@dylan:~$
 	```
 3. [2-arrow.js](./2-arrow.js) - Rewrite the following standard function to use ES6’s arrow syntax of the function `add`
+	**Execution Example**:
 	```
-	export default function getNeighborhoodsList() {
-	  this.sanFranciscoNeighborhoods = ['SOMA', 'Union Square'];
+	bob@dylan:~$ cat 2-main.js
+	import getNeighborhoodsList from './2-arrow.js';
 
-	  const self = this;
-	  this.addNeighborhood = function add(newNeighborhood) {
-	    self.sanFranciscoNeighborhoods.push(newNeighborhood);
-	    return self.sanFranciscoNeighborhoods;
-	  };
-	}
+	const neighborhoodsList = new getNeighborhoodsList();
+	const res = neighborhoodsList.addNeighborhood('Noe Valley');
+	console.log(res);
+	bob@dylan:~$
+	bob@dylan:~$ npm run dev 2-main.js 
+	[ 'SOMA', 'Union Square', 'Noe Valley' ]
+	bob@dylan:~$
 	```
 
 4. [3-default-parameter.js](./3-default-parameter.js) - Condense the internals of the following function to 1 line - without changing the name of each function/variable.
+	**Execution Example**:
 	```
-	export default function getSumOfHoods(initialNumber, expansion1989, expansion2019) {
-	  if (expansion1989 === undefined) {
-	    expansion1989 = 89;
-	  }
+	bob@dylan:~$ cat 3-main.js
+	import getSumOfHoods from './3-default-parameter.js';
 
-	  if (expansion2019 === undefined) {
-	    expansion2019 = 19;
-	  }
-	  return initialNumber + expansion1989 + expansion2019;
-	}
+	console.log(getSumOfHoods(34));
+	console.log(getSumOfHoods(34, 3));
+	console.log(getSumOfHoods(34, 3, 4));
+	bob@dylan:~$
+	bob@dylan:~$ npm run dev 3-main.js 
+	142
+	56
+	41
+	bob@dylan:~$
+	```
+5. [npm run dev 4-main.js](./npm run dev 4-main.js) - Modify the following function to return the number of arguments passed to it using the rest parameter syntax
+	**Execution Example**:
+	```
+	bob@dylan:~$ cat 4-main.js
+	import returnHowManyArguments from './4-rest-parameter.js';
+
+	console.log(returnHowManyArguments("one"));
+	console.log(returnHowManyArguments("one", "two", 3, "4th"));
+	bob@dylan:~$
+	bob@dylan:~$ npm run dev 4-main.js 
+	1
+	4
+	bob@dylan:~$
 	```
 
 ### Advanced
