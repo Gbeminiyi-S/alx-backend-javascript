@@ -64,11 +64,11 @@ An introductory project on:
 	  this.addNeighborhood = function add(newNeighborhood) {
 	    self.sanFranciscoNeighborhoods.push(newNeighborhood);
 	    return self.sanFranciscoNeighborhoods;
-  };
-}
+	  };
+	}
 	```
 
-3. [3-default-parameter.js](./3-default-parameter.js) - Condense the internals of the following function to 1 line - without changing the name of each function/variable.
+4. [3-default-parameter.js](./3-default-parameter.js) - Condense the internals of the following function to 1 line - without changing the name of each function/variable.
 	```
 	export default function getSumOfHoods(initialNumber, expansion1989, expansion2019) {
 	  if (expansion1989 === undefined) {
