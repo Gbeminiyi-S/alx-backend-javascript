@@ -94,5 +94,22 @@ An introductory project on:
 	4
 	bob@dylan:~$
 	```
+6. [5-spread-operator.js](5-spread-operator.js) - Using spread syntax, concatenate 2 arrays and each character of a string by modifying the function below
+        **Execution Example**:
+        ```
+	bob@dylan:~$ cat 5-main.js
+	import concatArrays from './5-spread-operator.js';
+
+	console.log(concatArrays(['a', 'b'], ['c', 'd'], 'Hello'));
+
+	bob@dylan:~$
+	bob@dylan:~$ npm run dev 5-main.js 
+	[
+	  'a', 'b', 'c',
+	  'd', 'H', 'e',
+	  'l', 'l', 'o'
+	]
+	bob@dylan:~$
+	```
 
 ### Advanced
