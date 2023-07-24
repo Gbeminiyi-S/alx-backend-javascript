@@ -112,11 +112,11 @@ An introductory project on:
 	bob@dylan:~$ npm run dev 5-main.js 
 	[
  	 'a', 'b', 'c',
-  	'd', 'H', 'e',
+  	 'd', 'H', 'e',
  	 'l', 'l', 'o'
 	]
 	bob@dylan:~$
-	```
+
 7. [6-string-interpolation.js](./6-string-interpolation.js) - Rewrite the return statement to use a template literal so you can the substitute the variables you’ve defined
 
 	**Execution Example**:
@@ -130,6 +130,5 @@ An introductory project on:
 	bob@dylan:~$ npm run dev 6-main.js 
 	As of 2017, it was the seventh-highest income county in the United States, with a per capita personal income of $119,868. As of 2015, San Francisco proper had a GDP of $154.2 billion, and a GDP per capita of $178,479.
 	bob@dylan:~$
-	```
 
 ### Advanced
