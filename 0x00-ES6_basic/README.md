@@ -23,6 +23,7 @@ An introductory project on:
 1. [0-constants.js](./0-constants.js) - Modify
 	- function `taskFirst` to instantiate variables using `const`
 	- function `taskNext` to instantiate variables using `let`
+	
 	**Execution Example**:
 	```
 	bob@dylan:~$ cat 0-main.js
@@ -36,6 +37,7 @@ An introductory project on:
 	bob@dylan:~$ 
 	```
 2. [1-block-scoped.js](./1-block-scoped.js) - modify the variables inside the function `taskBlock` so that the variables aren’t overwritten inside the conditional block
+
 	**Execution Example**:
 	```
 	bob@dylan:~$ cat 1-main.js
@@ -50,7 +52,8 @@ An introductory project on:
 	bob@dylan:~$
 	```
 3. [2-arrow.js](./2-arrow.js) - Rewrite the following standard function to use ES6’s arrow syntax of the function `add`
-	**Execution Example**:
+	
+ 	**Execution Example**:
 	```
 	bob@dylan:~$ cat 2-main.js
 	import getNeighborhoodsList from './2-arrow.js';
@@ -65,7 +68,8 @@ An introductory project on:
 	```
 
 4. [3-default-parameter.js](./3-default-parameter.js) - Condense the internals of the following function to 1 line - without changing the name of each function/variable.
-	**Execution Example**:
+	
+ 	**Execution Example**:
 	```
 	bob@dylan:~$ cat 3-main.js
 	import getSumOfHoods from './3-default-parameter.js';
@@ -81,7 +85,8 @@ An introductory project on:
 	bob@dylan:~$
 	```
 5. [npm run dev 4-main.js](./npm run dev 4-main.js) - Modify the following function to return the number of arguments passed to it using the rest parameter syntax
-	**Execution Example**:
+	
+ 	**Execution Example**:
 	```
 	bob@dylan:~$ cat 4-main.js
 	import returnHowManyArguments from './4-rest-parameter.js';
