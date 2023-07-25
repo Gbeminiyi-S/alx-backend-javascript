@@ -120,7 +120,7 @@ An introductory project on:
 7. [6-string-interpolation.js](./6-string-interpolation.js) - Rewrite the return statement to use a template literal so you can the substitute the variables you’ve defined
 
 	**Execution Example**:
-   	```plaintext
+   	```
 	niyi@ubuntu:~$ cat 6-main.js
 	import getSanFranciscoDescription from './6-string-interpolation.js';
 
@@ -180,9 +180,8 @@ An introductory project on:
 	```
 11. [10-loops.js](./10-loops.js) - Rewrite the function `appendToEachArrayValue` to use ES6’s `for...of` operator
 	
-	
 	**Execution Example**:
-        ```
+	```plaintext
 	niyi@ubuntu:~$ cat 10-main.js
 	import appendToEachArrayValue from './10-loops.js';
 
@@ -193,7 +192,7 @@ An introductory project on:
 	[ 'correctly-appended', 'correctly-fixed', 'correctly-displayed' ]
 	niyi@ubuntu:~$
 	```
-12. [11-createEmployeesObject.js](./11-createEmployeesObject.js) - Write a function named `createEmployeesObject` that will receive two arguments:
+13. [11-createEmployeesObject.js](./11-createEmployeesObject.js) - Write a function named `createEmployeesObject` that will receive two arguments:
 	- `departmentName` (String)
 	- `employees` (Array of Strings)
 	
@@ -218,7 +217,7 @@ An introductory project on:
 	{ Software: [ 'Bob', 'Sylvie' ] }
 	niyi@ubuntu:~$
 	```
-13. [getNumberOfDepartments](./getNumberOfDepartments) - Write a function named `createReportObject` whose parameter, `employeesList`, is the return value of the previous function `createEmployeesObject`.
+14. [getNumberOfDepartments](./getNumberOfDepartments) - Write a function named `createReportObject` whose parameter, `employeesList`, is the return value of the previous function `createEmployeesObject`.
 
 	- `createReportObject` should return an object containing the key `allEmployees` and a method property called `getNumberOfDepartments.`
 	- `allEmployees` is a key that maps to an object containing the department name and a list of all the employees in that department.
@@ -246,7 +245,7 @@ An introductory project on:
 	niyi@ubuntu:~$
 	```
 ### Advanced
-14. [report.allEmployees](./report.allEmployees) - Write a function named createIteratorObject, that will take into argument a report Object created with the previous function createReportObject.
+14. [report.allEmployees](./report.allEmployees) - Write a function named `createIteratorObject`, that will take into argument a report Object created with the previous function `createReportObject`.
 	- This function will return an iterator to go through every employee in every department.
 	**Execution Example**:
 	```
@@ -276,7 +275,7 @@ An introductory project on:
 	Sylvie
 	niyi@ubuntu:~$
 	```
-15. [npm run dev 101-main.js](./npm run dev 101-main.js) - write a function named `iterateThroughObject`. The function’s parameter `reportWithIterator` is the return value from `createIteratorObject`.
+15. [101-iterateThroughObject.js](./101-iterateThroughObject.js) - write a function named `iterateThroughObject`. The function’s parameter `reportWithIterator` is the return value from `createIteratorObject`.
 	- It should return every employee name in a string, separated by `|`
 
 	```
