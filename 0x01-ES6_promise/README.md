@@ -88,7 +88,7 @@ An introductory project on:
 	```
 
 4. [3-all.js](./3-all.js) - In this file, import `uploadPhoto` and `createUser` from `utils.js`
-	- Knowing that the functions in [utils.js](testFile/utils.js) return promises, use the prototype below to collectively resolve all promises and log `body firstName lastName` to the console.
+	- Knowing that the functions in [utils.js](testFiles/utils.js) return promises, use the prototype below to collectively resolve all promises and log `body firstName lastName` to the console.
 	```
 	function handleProfileSignup()
  	```
