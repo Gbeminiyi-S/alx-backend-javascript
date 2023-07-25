@@ -72,7 +72,9 @@ An introductory project on:
 			- `body`: `success`
 		- When the Promise rejects, return an empty `Error` object
 		- For every resolution, log `Got a response from the API` to the console
-	```
+
+	**Execution Example**:
+ 	```
 	bob@dylan:~$ cat 2-main.js
 	import handleResponseFromAPI from "./2-then";
 
@@ -91,7 +93,9 @@ An introductory project on:
 	function handleProfileSignup()
  	```
 	- In the event of an error, log `Signup system offline` to the console
-	```
+
+	**Execution Example**:
+ 	```
 	bob@dylan:~$ cat 3-main.js
 	import handleProfileSignup from "./3-all";
 	
