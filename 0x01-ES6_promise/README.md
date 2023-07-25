@@ -120,6 +120,8 @@ An introductory project on:
 	}
 	```
 
+        **Execution Example**:
+	```
 	bob@dylan:~$ cat 4-main.js
 	import signUpUser from "./4-user-promise";
 
@@ -128,4 +130,5 @@ An introductory project on:
 	bob@dylan:~$ 
 	bob@dylan:~$ npm run dev 4-main.js 
 	Promise { { firstName: 'Bob', lastName: 'Dylan' } }
-	bob@dylan:~$ 
+	bob@dylan:~$
+	```
