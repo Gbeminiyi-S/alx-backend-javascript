@@ -46,7 +46,7 @@ An introductory project on:
 			- reject the promise with an error object with the message `The fake API is not working currently`
 
 	**Execution Example**:
-        ```
+   	```
 	bob@dylan:~$ cat 1-main.js
 	import getFullResponseFromAPI from './1-promise';
 
