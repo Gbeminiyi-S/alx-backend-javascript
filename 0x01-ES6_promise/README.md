@@ -4,8 +4,8 @@ An introductory project on:
 - Promises (how, why, and what)
 - How to use the `then`, `resolve`, `catch` methods
 - How to use every method of the Promise object
-- Throw / Try
-- The await operator
+- `Throw` / `Try`
+- The `await` operator
 - How to use an `async` function
 
 ## Requirements
@@ -84,3 +84,21 @@ An introductory project on:
 	Got a response from the API
 	bob@dylan:~$ 
 	```
+
+4. [3-all.js](./3-all.js) - In this file, import `uploadPhoto` and `createUser` from `utils.js`
+	- Knowing that the functions in [utils.js](testFile/utils.js) return promises, use the prototype below to collectively resolve all promises and log `body firstName lastName` to the console.
+	```
+	function handleProfileSignup()
+ 	```
+	- In the event of an error, log `Signup system offline` to the console
+	```
+	bob@dylan:~$ cat 3-main.js
+	import handleProfileSignup from "./3-all";
+	
+	handleProfileSignup();
+	
+	bob@dylan:~$ 
+	bob@dylan:~$ npm run dev 3-main.js 
+	photo-profile-1 Guillaume Salva
+	bob@dylan:~$ 	
+ 	```
