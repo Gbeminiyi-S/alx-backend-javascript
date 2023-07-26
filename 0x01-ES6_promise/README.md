@@ -150,7 +150,50 @@ An introductory project on:
 	    ..
 	bob@dylan:~$ 
 	```
-7. [100-await.js](./100-await.js) - Import `uploadPhoto` and `createUser` from `utils.js`
+
+7. [7-load_balancer.js](./7-load_balancer.js) - Write and export a function named `loadBalancer`. It should accept two arguments `chinaDownload` (Promise) and `USDownload` (Promise).
+
+	- The function should return the value returned by the promise that resolved the first.
+	```
+	export default function loadBalancer(chinaDownload, USDownload) {
+
+	}
+	```
+
+   **Execution Example**:
+	```
+	bob@dylan:~$ cat 7-main.js
+import loadBalancer from "./7-load_balancer";
+
+const ukSuccess = 'Downloading from UK is faster';
+const frSuccess = 'Downloading from FR is faster';
+
+const promiseUK = new Promise(function(resolve, reject) {
+    setTimeout(resolve, 100, ukSuccess);
+});
+
+const promiseUKSlow = new Promise(function(resolve, reject) {
+    setTimeout(resolve, 400, ukSuccess);
+});
+
+const promiseFR = new Promise(function(resolve, reject) {
+    setTimeout(resolve, 200, frSuccess);
+});
+
+const test = async () => {
+    console.log(await loadBalancer(promiseUK, promiseFR));
+    console.log(await loadBalancer(promiseUKSlow, promiseFR));
+}
+
+test();
+
+bob@dylan:~$ 
+bob@dylan:~$ npm run dev 7-main.js 
+Downloading from UK is faster
+Downloading from FR is faster
+bob@dylan:~$ 
+	```
+8. [100-await.js](./100-await.js) - Import `uploadPhoto` and `createUser` from `utils.js`
 
 	- Write an async function named `asyncUploadUser` that will call these two functions and return an object with the following format:
 	```
