@@ -158,6 +158,7 @@ An introductory project on:
 	  photo: response_from_uploadPhoto_function,
 	  user: response_from_createUser_function,
 	}
+ 	```
 	- If one of the async function fails, return an empty object. Example:
 	```
 	{
