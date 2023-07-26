@@ -127,7 +127,7 @@ An introductory project on:
 	console.log(signUpUser("Bob", "Dylan"));
 
 	bob@dylan:~$ 
-	bob@dylan:~$ npm run dev 4-main.js 
+	bob100-await.js@dylan:~$ npm run dev 4-main.js 
 	Promise { { firstName: 'Bob', lastName: 'Dylan' } }
 	bob@dylan:~$
 	```
@@ -150,4 +150,40 @@ An introductory project on:
 	    ..
 	bob@dylan:~$ 
 	```
+7. [100-await.js](./100-await.js) - Import `uploadPhoto` and `createUser` from `utils.js`
 
+	- Write an async function named `asyncUploadUser` that will call these two functions and return an object with the following format:
+	```
+	{
+	  photo: response_from_uploadPhoto_function,
+	  user: response_from_createUser_function,
+	}
+	- If one of the async function fails, return an empty object. Example:
+	```
+	{
+	  photo: null,
+	  user: null,
+	}
+	```
+
+	**Execution Example**:
+	```
+	bob@dylan:~$ cat 100-main.js
+	import asyncUploadUser from "./100-await";
+
+	const test = async () => {
+	    const value = await asyncUploadUser();
+	    console.log(value);
+	};
+
+	test();
+
+	bob@dylan:~$ 
+	bob@dylan:~$ npm run dev 100-main.js 
+	{
+	  photo: { status: 200, body: 'photo-profile-1' },
+	  user: { firstName: 'Guillaume', lastName: 'Salva' }
+	}
+	bob@dylan:~$ 
+	```
+   
