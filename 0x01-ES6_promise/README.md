@@ -119,8 +119,7 @@ An introductory project on:
 	  lastName: value,
 	}
 	```
-
-        **Execution Example**:
+   **Execution Example**:
 	```
 	bob@dylan:~$ cat 4-main.js
 	import signUpUser from "./4-user-promise";
@@ -136,7 +135,7 @@ An introductory project on:
 
 	- The function should return a Promise rejecting with an Error and the string `$fileName cannot be processed`
 
-        **Execution Example**:
+   **Execution Example**:
 	```
 	bob@dylan:~$ cat 5-main.js
 	import uploadPhoto from './5-photo-reject';
