@@ -37,7 +37,7 @@ An introductory project on:
 	```
 	getFullResponseFromAPI(success)
 	```
-	When the argument is:
+	- When the argument is:
 		- `true`
 			- resolve the promise by passing an object with 2 attributes:
 				- `status`: `200`
@@ -66,7 +66,7 @@ An introductory project on:
 	```
 	function `handleResponseFromAPI(promise)`
 	```
-	Append three handlers to the function:
+	- Append three handlers to the function:
 		- When the Promise resolves, return an object with the following attributes
 			- `status`: `200`
 			- `body`: `success`
@@ -163,35 +163,35 @@ An introductory project on:
    **Execution Example**:
 	```
 	bob@dylan:~$ cat 7-main.js
-import loadBalancer from "./7-load_balancer";
-
-const ukSuccess = 'Downloading from UK is faster';
-const frSuccess = 'Downloading from FR is faster';
-
-const promiseUK = new Promise(function(resolve, reject) {
-    setTimeout(resolve, 100, ukSuccess);
-});
-
-const promiseUKSlow = new Promise(function(resolve, reject) {
-    setTimeout(resolve, 400, ukSuccess);
-});
-
-const promiseFR = new Promise(function(resolve, reject) {
-    setTimeout(resolve, 200, frSuccess);
-});
-
-const test = async () => {
-    console.log(await loadBalancer(promiseUK, promiseFR));
-    console.log(await loadBalancer(promiseUKSlow, promiseFR));
-}
-
-test();
-
-bob@dylan:~$ 
-bob@dylan:~$ npm run dev 7-main.js 
-Downloading from UK is faster
-Downloading from FR is faster
-bob@dylan:~$ 
+	import loadBalancer from "./7-load_balancer";
+	
+	const ukSuccess = 'Downloading from UK is faster';
+	const frSuccess = 'Downloading from FR is faster';
+	
+	const promiseUK = new Promise(function(resolve, reject) {
+	    setTimeout(resolve, 100, ukSuccess);
+	});
+	
+	const promiseUKSlow = new Promise(function(resolve, reject) {
+	    setTimeout(resolve, 400, ukSuccess);
+	});
+	
+	const promiseFR = new Promise(function(resolve, reject) {
+	    setTimeout(resolve, 200, frSuccess);
+	});
+	
+	const test = async () => {
+	    console.log(await loadBalancer(promiseUK, promiseFR));
+	    console.log(await loadBalancer(promiseUKSlow, promiseFR));
+	}
+	
+	test();
+	
+	bob@dylan:~$ 
+	bob@dylan:~$ npm run dev 7-main.js 
+	Downloading from UK is faster
+	Downloading from FR is faster
+	bob@dylan:~$ 
 	```
 8. [100-await.js](./100-await.js) - Import `uploadPhoto` and `createUser` from `utils.js`
 
