@@ -5,3 +5,4 @@ This repository contains repositories to various projects that I've worked on in
 ## List of Projects
 - [0x00-ES6_basic](./0x00-ES6_basic) - An introduction to `ES6`
 - [0x01-ES6_promise](./0x01-ES6_promise) - An introduction to `ES6` `Promise`, `Async/Await`
+- [0x02-ES6_classes](./0x02-ES6_classes) - An introduction to `ES6` `class`
