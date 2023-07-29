@@ -245,7 +245,7 @@ An introductory project on:
 	niyi@ubuntu:~$
 	```
 ### Advanced
-14. [report.allEmployees](./report.allEmployees) - Write a function named `createIteratorObject`, that will take into argument a report Object created with the previous function `createReportObject`.
+14. [report.allEmployees](./report.allEmployees.js) - Write a function named `createIteratorObject`, that will take into argument a report Object created with the previous function `createReportObject`.
 	- This function will return an iterator to go through every employee in every department.
 	**Execution Example**:
 	```
