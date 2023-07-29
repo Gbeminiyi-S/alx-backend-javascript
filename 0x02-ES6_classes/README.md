@@ -216,7 +216,7 @@ An introductory project on:
 	Evacuate slowly the 60 floors
 	bob@dylan:~$ 
 	```
-8. [7-airport.js](/7-airport.js) - Implement a class named `Airport`:
+8. [7-airport.js](./7-airport.js) - Implement a class named `Airport`:
 	- Constructor attributes:
 		- `name` (String)
 		- `code` (String)
