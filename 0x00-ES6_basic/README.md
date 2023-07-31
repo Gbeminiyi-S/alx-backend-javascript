@@ -99,7 +99,7 @@ An introductory project on:
 	4
 	niyi@ubuntu:~$
 	```
-6. [5-spread-operator.js](5-spread-operator.js) - Using spread syntax, concatenate 2 arrays and each character of a string by modifying the function below
+6. [5-spread-operator.js](./5-spread-operator.js) - Using spread syntax, concatenate 2 arrays and each character of a string by modifying the function below
 
    	**Execution Example**:
 	```plaintext
@@ -217,7 +217,7 @@ An introductory project on:
 	{ Software: [ 'Bob', 'Sylvie' ] }
 	niyi@ubuntu:~$
 	```
-14. [getNumberOfDepartments](./getNumberOfDepartments) - Write a function named `createReportObject` whose parameter, `employeesList`, is the return value of the previous function `createEmployeesObject`.
+14. [12-createReportObject.js](./12-createReportObject.js) - Write a function named `createReportObject` whose parameter, `employeesList`, is the return value of the previous function `createEmployeesObject`.
 
 	- `createReportObject` should return an object containing the key `allEmployees` and a method property called `getNumberOfDepartments.`
 	- `allEmployees` is a key that maps to an object containing the department name and a list of all the employees in that department.
@@ -245,7 +245,7 @@ An introductory project on:
 	niyi@ubuntu:~$
 	```
 ### Advanced
-14. [report.allEmployees](./report.allEmployees) - Write a function named `createIteratorObject`, that will take into argument a report Object created with the previous function `createReportObject`.
+14. [100-createIteratorObject.js](./100-createIteratorObject.js) - Write a function named `createIteratorObject`, that will take into argument a report Object created with the previous function `createReportObject`.
 	- This function will return an iterator to go through every employee in every department.
 	**Execution Example**:
 	```
