@@ -57,8 +57,8 @@ An introductory project on:
 3. [2-get_students_by_loc.js](./2-get_students_by_loc.js) - Create a function `getStudentsByLocation` that returns an array of objects who are located in a specific city.
 	- It should accept a list of students (from `getListStudents`) and a `city` (string) as parameters.
 
-        **Execution Example**:
-	```
+   **Execution Example**:
+   	```
 	import getListStudents from "./0-get_list_students.js";
 	import getStudentsByLocation from "./2-get_students_by_loc.js";
 
@@ -76,7 +76,7 @@ An introductory project on:
 4. [3-get_ids_sum.js](./3-get_ids_sum.js) - Create a function `getStudentIdsSum` that returns the sum of all the student ids.
 	- It should accept a list of students (from `getListStudents`) as a parameter.
 	
-        **Execution Example**:
+   **Execution Example**:
 	```
 	bob@dylan:~$ cat 3-main.js
 	import getListStudents from "./0-get_list_students.js";
