@@ -7,6 +7,8 @@ export default function cleanSet(set, startString) {
         match.push(string.slice(startString.length));
       }
     });
+    return match.join('-');
+  } else {
+    return '';
   }
-  return match.join('-');
 }
