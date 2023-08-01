@@ -1,4 +1,4 @@
-export default function cleanSet(set, startString='') {
+export default function cleanSet(set, startString = '') {
   const match = [];
 
   if (startString.length && (set instanceof Set) && (typeof startString === 'string')) {
