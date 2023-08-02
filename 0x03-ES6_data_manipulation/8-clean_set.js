@@ -3,7 +3,7 @@ export default function cleanSet(set, startString = '') {
 
   if (startString.length && (set instanceof Set) && (typeof startString === 'string')) {
     set.forEach((string) => {
-      if (string.startsWith(startString)) {
+      if (string && string.startsWith(startString)) {
         match.push(string.slice(startString.length));
       }
     });
