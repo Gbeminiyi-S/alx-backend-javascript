@@ -92,4 +92,123 @@ An introductory project on:
 	8
 	bob@dylan:~$ 
 	```
+5. [4-update_grade_by_city.js](./4-update_grade_by_city.js) - Create a function `updateStudentGradeByCity` that returns an array of students for a specific city with their new grade
+	- It should accept a list of students (from `getListStudents`), a `city` (String), and `newGrades` (Array of “grade” objects) as parameters.
+	- `newGrades` is an array of objects with this format:
+	```
+	   {
+	    studentId: 31,
+	    grade: 78,
+	  }
+ 	```
+ 	- If a student doesn’t have grade in `newGrades`, the final grade should be `N/A`.
+	
+   **Execution Example**:
+  	```
+   	bob@dylan:~$ cat 4-main.js
+	import getListStudents from "./0-get_list_students.js";
+	import updateStudentGradeByCity from "./4-update_grade_by_city.js";
+	
+	console.log(updateStudentGradeByCity(getListStudents(), "San Francisco", [{ studentId: 5, grade: 97 }, { studentId: 1, grade: 86 }]));
+	
+	console.log(updateStudentGradeByCity(getListStudents(), "San Francisco", [{ studentId: 5, grade: 97 }]));
+	
+	bob@dylan:~$ 
+	bob@dylan:~$ npm run dev 4-main.js 
+	[
+	  {
+	    id: 1,
+	    firstName: 'Guillaume',
+	    location: 'San Francisco',
+	    grade: 86
+	  },
+	  { id: 5, firstName: 'Serena', location: 'San Francisco', grade: 97 }
+	]
+	[
+	  {
+	    id: 1,
+	    firstName: 'Guillaume',
+	    location: 'San Francisco',
+	    grade: 'N/A'
+	  },
+	  { id: 5, firstName: 'Serena', location: 'San Francisco', grade: 97 }
+	]
+	bob@dylan:~$ 
+	```
+
+6. [5-typed_arrays.js](./5-typed_arrays.js) - Create a function named `createInt8TypedArray` that returns a new `ArrayBuffer` with an `Int8` value at a specific position.
+	- It should accept three arguments: `length` (Number), `position` (Number), and `value` (Number).
+	- If adding the value is not possible the error `Position outside range` should be thrown.
+	
+   **Execution Example**:	
+ 	```
+	bob@dylan:~$ cat 5-main.js
+	import createInt8TypedArray from "./5-typed_arrays.js";
+	
+	console.log(createInt8TypedArray(10, 2, 89));
+	
+	bob@dylan:~$ 
+	bob@dylan:~$ npm run dev 5-main.js 
+	DataView {
+	  byteLength: 10,
+	  byteOffset: 0,
+	  buffer: ArrayBuffer {
+	    [Uint8Contents]: <00 00 59 00 00 00 00 00 00 00>,
+	    byteLength: 10
+	  }
+	}
+	bob@dylan:~$ 
+	```
+7. [6-set.js](./6-set.js) - Create a function named `setFromArray` that returns a `Set` from an array.
+	- It accepts an argument (Array, of any kind of element).
+	
+   **Execution Example**:
+	```
+ 	bob@dylan:~$ cat 6-main.js
+	import setFromArray from "./6-set.js";
+	
+	console.log(setFromArray([12, 32, 15, 78, 98, 15]));
+	
+	bob@dylan:~$ 
+	bob@dylan:~$ npm run dev 6-main.js 
+	Set { 12, 32, 15, 78, 98 }
+	bob@dylan:~$
+ 	```
+ 8. [7-has_array_values.js](./7-has_array_values.js) - Create a function named `hasValuesFromArray` that returns a boolean if all the elements in the array exist within the set.
+	- It accepts two arguments: a `set` (Set) and an `array` (Array).
+	
+   	**Execution Example**:
+   	```
+  	bob@dylan:~$ cat 7-main.js
+	import hasValuesFromArray from "./7-has_array_values.js";
+ 
+	console.log(hasValuesFromArray(new Set([1, 2, 3, 4, 5]), [1]));
+	console.log(hasValuesFromArray(new Set([1, 2, 3, 4, 5]), [10]));
+	console.log(hasValuesFromArray(new Set([1, 2, 3, 4, 5]), [1, 10]));
+	
+	bob@dylan:~$ 
+	bob@dylan:~$ npm run dev 7-main.js 
+	true
+	false
+	false
+	bob@dylan:~$
+    	```
+ 9. [8-clean_set.js](./8-clean_set.js) - Create a function named `cleanSet` that returns a string of all the set values that start with a specific string (`startString`).
+	- It accepts two arguments: a `set` (Set) and a `startString` (String).
+	- When a value starts with `startString` you only append the rest of the string. The string contains all the values of the set separated by `-`.
+	
+   	**Execution Example**:
+	```
+	bob@dylan:~$ cat 8-main.js
+	import cleanSet from "./8-clean_set.js";
+	
+	console.log(cleanSet(new Set(['bonjovi', 'bonaparte', 'bonappetit', 'banana']), 'bon'));
+	console.log(cleanSet(new Set(['bonjovi', 'bonaparte', 'bonappetit', 'banana']), ''));
+	
+	bob@dylan:~$ 
+	bob@dylan:~$ npm run dev 8-main.js 
+	jovi-aparte-appetit
+	
+	bob@dylan:~$ 
+	```
 ### Advanced
